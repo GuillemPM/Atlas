@@ -1,0 +1,37 @@
+{
+  "name": "atlas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "sync": "\"npm run build && node dist/dbInit.js\"",
+    "recreate": "\"npm run build && node dist/dbInit.js -f\"",
+    "nodemon": "nodemon -e ts --exec \"npm run build && npm start\"",
+    "dev": "\"npm run build && npm start\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/easy-table": "0.0.33",
+    "@types/table": "^6.3.2",
+    "consola": "^2.15.3",
+    "discord.js": "^14.9.0",
+    "easy-table": "^1.1.1",
+    "glob": "^7.1.7",
+    "sequelize": "^6.31.0",
+    "sqlite3": "^5.0.2",
+    "table": "^6.7.1",
+    "tslib": "^2.5.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.4",
+    "@types/node": "^18.15.11",
+    "@types/sequelize": "^4.28.14",
+    "@types/uuid": "^8.3.1",
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.22"
+  }
+}
